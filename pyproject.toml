@@ -73,7 +73,7 @@ optional = [
   "scipy",  # optuna/_gp.
   "torch",  # optuna/_gp.
   "greenlet",  # optuna/_gp. necessary for faster gp.
-  "grpcio",  # optuna/storages/_grpc.
+  "grpcio; platform_system != 'Windows' or platform_machine != 'ARM64'", # optuna/storages/_grpc.
   "protobuf>=5.28.1",  # optuna/storages/_grpc.
 ]
 
